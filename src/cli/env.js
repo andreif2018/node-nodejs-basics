@@ -6,5 +6,3 @@ export const parseEnv = () => {
   }
   console.log(result.trim());
 };
-
-parseEnv();

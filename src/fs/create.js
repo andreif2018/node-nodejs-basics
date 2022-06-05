@@ -1,4 +1,5 @@
 import * as fileSystem from 'fs';
+
 export const create = async () => {
   const filePath = './files/fresh.txt';
   const fileContent = '`I am fresh and young`';

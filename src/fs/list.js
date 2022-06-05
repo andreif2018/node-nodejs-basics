@@ -1,4 +1,4 @@
-import fileSystem from "fs";
+import * as fileSystem from 'fs';
 
 export const list = async () => {
   const filePath = './files/';
