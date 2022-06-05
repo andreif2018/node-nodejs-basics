@@ -1,3 +1,14 @@
+import * as fileSystem from 'fs';
+
 export const write = async () => {
-    // Write your code here 
+  const wrStream = fileSystem.createWriteStream('./files/fileToWrite.txt');
+  wrStream.on('error', (error) => {
+    console.log(`error: ${error.message}`);
+    throw error;
+  });
+  wrStream.write(process.stdin.toString(), 'base64');
+  wrStream.on('finish', () => {
+    console.log('done');
+  });
+  wrStream.end();
 };
