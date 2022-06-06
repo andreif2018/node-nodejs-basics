@@ -1,5 +1,5 @@
-import zip from "zlib";
-import fileSystem from "fs";
+import * as zip from "zlib";
+import * as fileSystem from 'fs';
 
 export const decompress = async () => {
   const handleZip = zip.createUnzip();
